@@ -1,0 +1,69 @@
+@import 'fonts';
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    font-family: $font;
+    padding-bottom: 30px;
+    background-color: #FAF3DD;
+    margin-bottom: 20px;
+    
+
+    h1 {
+        font-size: $font-xl;
+        margin-left: 45px;
+      
+    }
+}
+
+.logged-out-sub-nav {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: black;
+        margin-left: 12px;
+        margin-right: 12px;
+        font-size: $font-ml;
+        width: auto;
+    }
+
+    a:hover {
+        cursor: pointer;
+        color: #696D7D;
+    }
+
+}
+
+.logged-in-sub-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 900px;
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: $font-ml;
+    }
+
+    a:hover {
+        color: #696D7D;
+    }
+
+    button {
+        border: none;
+        background: none;
+        margin-right: 35px;
+        font-family: $font;
+        font-size: $font-ml;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: #696D7D;
+    }
+}

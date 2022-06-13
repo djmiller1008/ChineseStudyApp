@@ -1,0 +1,54 @@
+@import 'fonts';
+
+.main-search-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font;
+    padding-top: 20px;
+    
+    h1 {
+        text-align: center;
+        font-size: $font-l;
+        padding-bottom: 20px;
+
+    }
+}
+
+.search-bar {
+    margin-bottom: 20px;
+
+    input {
+        margin-right: 10px;
+        padding: 3px 7px;
+    }
+
+    button {
+        margin-left: 10px;
+    }
+}
+
+.search-table {
+    width: 85vw;
+    text-align: center;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+}
+
+.search-results-div {
+    display: flex;
+    justify-content: center;
+}
+
+.title-row {
+
+    th {
+      padding-bottom: 15px;
+      font-size: $font-ml;
+    }
+}
+
+.search-table-row:hover {
+    cursor: pointer;
+    background-color: #FAF3DD;
+}

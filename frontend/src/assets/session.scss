@@ -1,0 +1,35 @@
+@import 'fonts';
+
+.session-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font;
+
+    h1 {
+        font-size: $font-l;
+        padding-bottom: 20px;
+    }
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    input {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        
+        padding: 5px 5px;
+    }
+}
+
+.session-submit {
+    width: 100px;
+    align-self: center;
+}
+
+.session-submit:hover {
+    cursor: pointer;
+}
