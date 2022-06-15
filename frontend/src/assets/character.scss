@@ -1,0 +1,39 @@
+@import 'fonts';
+
+
+.character-display-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    font-family: $font;
+   
+}
+
+.character-section {
+    font-size: $font-character;
+}
+
+.character-info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: $font-l;
+}
+
+.button-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-character-button {
+    background: none;
+
+    padding: 5px 8px;
+    font-family: $font;
+
+}
+
+.add-character-button:hover {
+    background-color: #FAF3DD;
+}
