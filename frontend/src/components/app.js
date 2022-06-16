@@ -7,7 +7,8 @@ import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Search from './search/search';
-import CharacterDisplay from './characters/character_display';
+import CharacterDisplayContainer from './characters/character_display_container';
+import DiaryContainer from './diary/diary_container';
 
 const App = () => (
   <div>
@@ -18,7 +19,8 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
     </Switch>
     <ProtectedRoute path="/search" component={Search} />
-    <ProtectedRoute path="/character_display" component={CharacterDisplay} />
+    <ProtectedRoute path="/character_display" component={CharacterDisplayContainer} />
+    <ProtectedRoute path="/diary" component={DiaryContainer} />
   </div>
 );
 
