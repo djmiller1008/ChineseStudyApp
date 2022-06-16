@@ -47,12 +47,16 @@ class Search extends React.Component {
 
         return (
             <table className='search-table'>
-                <tr className='title-row'>
-                    <th>Character</th>
-                    <th>Definition</th>
-                    <th>Pinyin with tone</th>
-                </tr>
-                {words}
+                <thead>
+                    <tr className='title-row'>
+                        <th>Character</th>
+                        <th>Definition</th>
+                        <th>Pinyin with tone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {words}
+                </tbody>
             </table>
 
         );
