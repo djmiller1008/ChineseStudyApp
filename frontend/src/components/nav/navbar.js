@@ -22,6 +22,7 @@ class NavBar extends React.Component {
             <nav className='logged-in-sub-nav'>
                 <nav className='links-nav'>
                   <Link to={'/search'}>Search</Link>
+                  <Link to={'/diary'}>Diary</Link>
                 </nav>
                 <button onClick={this.logoutUser}>Logout</button>
             </nav>
