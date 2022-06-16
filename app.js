@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const users = require("./routes/api/users");
+const characterDiary = require("./routes/api/character_diary");
 
 const app = express();
 
@@ -25,3 +26,5 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use("/api/users", users); 
+app.use("/api/character_diary", characterDiary);
+
