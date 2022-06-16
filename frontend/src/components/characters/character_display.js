@@ -2,6 +2,19 @@ import React from "react";
 import "../../assets/character.scss";
 
 const CharacterDisplay = (props) => {
+    
+    const handleClick = (e) => {
+        e.preventDefault();
+        const entry = {
+            character: props.location.state.word.string,
+            userId: props.userId,
+            definition: props.location.state.word.kDefinition,
+            pinyin: props.location.state.word.kMandarin
+        };
+
+        props.addEntryToDiary(entry);
+        
+    }
 
     return (
         <div className="main-character-display">
@@ -15,7 +28,7 @@ const CharacterDisplay = (props) => {
                 </section>
             </div>
             <section className="button-section">
-                <button className="add-character-button">Add to Character Diary</button>
+                <button onClick={handleClick} className="add-character-button">Add to Character Diary</button>
             </section>
            
         </div>
