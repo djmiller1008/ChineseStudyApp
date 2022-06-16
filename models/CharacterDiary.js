@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const CharacterDiarySchema = new Schema({
     userId: {
-        type: Number,
+        type: String,
         required: true
     },
     character: {
