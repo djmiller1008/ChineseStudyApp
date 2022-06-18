@@ -7,3 +7,7 @@ export const getDiary = id => {
 export const addCharacterToDiary = data => {
     return axios.post('api/character_diary', data)
 };
+
+export const removeCharacterFromDiary = id => {
+    return axios.delete(`api/character_diary/${id}`)
+}
