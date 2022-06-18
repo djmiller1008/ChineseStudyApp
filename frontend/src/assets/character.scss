@@ -28,12 +28,22 @@
 
 .add-character-button {
     background: none;
-
     padding: 5px 8px;
     font-family: $font;
-
 }
 
 .add-character-button:hover {
     background-color: #FAF3DD;
+}
+
+.delete-character-button {
+    background: none;
+    padding: 5px 8px;
+    font-family: $font;
+    color: white;
+    background-color: #d11a2a;
+}
+
+.delete-character-button:hover {
+    background-color: #b81422
 }
