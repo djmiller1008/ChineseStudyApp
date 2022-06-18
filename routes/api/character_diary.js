@@ -23,14 +23,25 @@ router.post('/',
         
         const newCharacterDiary = new CharacterDiary({
             character: req.body.character,
-            userId: req.body.userId,
+            userId: req.body.user_id,
             definition: req.body.definition,
             pinyin: req.body.pinyin
         });
+        
 
         newCharacterDiary.save().then(character => res.json(character));
     }
 );
+
+router.delete('/:character_id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        
+        CharacterDiary.findOneAndDelete({ _id: req.params.character_id })
+            .then(character => res.json(character))
+    }
+);
+ 
 
 module.exports = router;
 
