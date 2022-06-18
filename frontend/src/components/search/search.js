@@ -1,4 +1,5 @@
 import React from 'react';
+import Table from '../table/table';
 import "../../assets/search.scss";
 
 class Search extends React.Component {
@@ -27,47 +28,7 @@ class Search extends React.Component {
             })
     }
 
-    handleClick(word) {
-        this.props.history.push({
-            pathname: '/character_display',
-            state: word 
-       })
-    }
-
-    
-    renderCharacters() {
-        const words = this.state.results.filter(word => word.kDefinition !== null)
-                        .map((word, i) => (
-                            <tr key={i} className='search-table-row' onClick={() => this.handleClick({word})}>
-                            <td>{word.string}</td>
-                            <td>{word.kDefinition}</td>
-                            <td>{word.kMandarin}</td>
-                        </tr>
-        ));
-
-        return (
-            <table className='search-table'>
-                <thead>
-                    <tr className='title-row'>
-                        <th>Character</th>
-                        <th>Definition</th>
-                        <th>Pinyin with tone</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {words}
-                </tbody>
-            </table>
-
-        );
-    }
-
     render() {
-        let words;
-        if (this.state.results.length > 0) {
-            words = this.renderCharacters();
-            
-        }
         return (
             <div>
                 <div className='main-search-div'>
@@ -81,7 +42,7 @@ class Search extends React.Component {
                     </div>
                 </div>
                 <div className='search-results-div'>
-                    {words}
+                    <Table data={this.state.results} />
                 </div>
                 
             </div>
