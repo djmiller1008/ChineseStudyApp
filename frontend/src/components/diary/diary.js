@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Table from '../table/table';
 
 const Diary = props => {
 
@@ -6,15 +7,9 @@ const Diary = props => {
         props.getDiary(props.user_id);
     }, [])
 
-    const displayDiary = () => {
-        if (props.diary.length > 0) {
-            return <section>{props.diary[0].character}</section>
-        }
-    }
-
     return (
         <div>
-            {displayDiary()}
+            <Table data={props.diary} />
         </div>
     )
 }
