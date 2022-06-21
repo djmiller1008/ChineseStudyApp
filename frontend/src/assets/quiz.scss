@@ -1,0 +1,65 @@
+@import "fonts";
+
+.main-quiz-container {
+    margin-top: 30px;
+    font-family: $font;
+
+    h1 {
+        text-align: center;
+        font-size: $font-l;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+}
+
+.answer-section {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $font;
+
+    button {
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 5px 8px;
+        background: none;
+        font-size: $font-ml;
+    }
+
+    button:hover {
+        background-color: #FAF3DD;
+    }
+}
+
+.message-section {
+    height: 50px;
+    font-family: $font;
+    font-size: $font-ml;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.endgame-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    section {
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+
+    button {
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 5px 8px;
+        background: none;
+        font-size: $font-ml;
+    }
+
+    button:hover {
+        background-color: #FAF3DD;
+    }
+}
