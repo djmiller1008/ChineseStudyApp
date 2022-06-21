@@ -23,6 +23,7 @@ class NavBar extends React.Component {
                 <nav className='links-nav'>
                   <Link to={'/search'}>Search</Link>
                   <Link to={'/diary'}>Diary</Link>
+                  <Link to={'/quiz'}>Quiz</Link>
                 </nav>
                 <button onClick={this.logoutUser}>Logout</button>
             </nav>
