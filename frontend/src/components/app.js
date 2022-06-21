@@ -9,6 +9,7 @@ import SignupFormContainer from './session/signup_form_container';
 import Search from './search/search';
 import CharacterDisplayContainer from './characters/character_display_container';
 import DiaryContainer from './diary/diary_container';
+import QuizContainer from './quiz/quiz_container';
 
 const App = () => (
   <div>
@@ -21,6 +22,7 @@ const App = () => (
     <ProtectedRoute path="/search" component={Search} />
     <ProtectedRoute path="/character_display" component={CharacterDisplayContainer} />
     <ProtectedRoute path="/diary" component={DiaryContainer} />
+    <ProtectedRoute path="/quiz" component={QuizContainer} />
   </div>
 );
 
