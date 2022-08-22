@@ -8,7 +8,7 @@ const characterDiary = require("./routes/api/character_diary");
 const app = express();
 
 const db = require('./config/keys').mongoURI;
- 
+  
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
