@@ -16,7 +16,8 @@ class MainPage extends React.Component {
           <p>Character Diary</p>
           <p className='indented'>--Use the character diary to store all of your learned characters</p>
 
-          
+          <p>Quiz</p>
+          <p className='indented'>--Review with a multiple choice quiz of all the characters in your diary</p>
         </section>
         
         <footer>
