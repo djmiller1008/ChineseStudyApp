@@ -8,13 +8,6 @@ const characterDiary = require("./routes/api/character_diary");
 
 const app = express();
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  })
-}
-
 const db = require('./config/keys').mongoURI;
   
 mongoose
@@ -36,3 +29,9 @@ require('./config/passport')(passport);
 app.use("/api/users", users); 
 app.use("/api/character_diary", characterDiary);
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  })
+}
