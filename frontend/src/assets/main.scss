@@ -32,3 +32,11 @@
     padding-left: 20px;
     padding-bottom: 20px;
 }
+
+.no-entries-div {
+    display: flex;
+    justify-content: center;
+    font-family: $font;
+    font-size: $font-ml;
+    margin-top: 4rem;
+}
