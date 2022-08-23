@@ -170,7 +170,9 @@ const Question = ({ getDiary, user_id, diary }) => {
     } 
 
     return (
-        <div></div>
+        <div className="no-entries-div">
+            <p>Add some characters to your diary to take a quiz!</p>
+        </div>
     )
 };
 
