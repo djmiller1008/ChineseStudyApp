@@ -25,5 +25,5 @@ const App = () => (
     <ProtectedRoute path="/quiz" component={QuizContainer} />
   </div>
 );
-
+ 
 export default App; 
