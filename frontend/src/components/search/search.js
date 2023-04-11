@@ -21,7 +21,7 @@ class Search extends React.Component {
 
     handleSearch(e) {
         e.preventDefault();
-        fetch(`http://ccdb.hemiola.com/characters/mandarin/${this.state.searchTerm}?fields=kDefinition,kMandarin,string`)
+        fetch(`https://ccdb.hemiola.com/characters/mandarin/${this.state.searchTerm}?fields=kDefinition,kMandarin,string`)
             .then(response => response.json())
             .then(data => {
                 this.setState({ results: data })
@@ -44,9 +44,7 @@ class Search extends React.Component {
                 <div className='search-results-div'>
                     <Table data={this.state.results} />
                 </div>
-                
             </div>
-            
         )
     }
 }
