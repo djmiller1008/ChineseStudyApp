@@ -11,17 +11,15 @@ class Search extends React.Component {
         }
         this.handleInput = this.handleInput.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
-
     }
 
-  
     handleInput(e) {
         this.setState({ searchTerm: e.currentTarget.value })
     }
 
     handleSearch(e) {
         e.preventDefault();
-        fetch(`https://ccdb.hemiola.com/characters/mandarin/${this.state.searchTerm}?fields=kDefinition,kMandarin,string`)
+        fetch(`http://ccdb.hemiola.com/characters/mandarin/${this.state.searchTerm}?fields=kDefinition,kMandarin,string`)
             .then(response => response.json())
             .then(data => {
                 this.setState({ results: data })
