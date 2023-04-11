@@ -31,16 +31,11 @@ const Question = ({ getDiary, user_id, diary }) => {
         setDiaryIndex(0);
     }
 
-    
-
     const createQuestion = () => {
-
         if (diaryIndex >= diary.length) {
             return (
                 <div className="endgame-div">
-                    
                     <section>
-                        
                         <p>You got {numCorrect} / {diary.length} correct.</p>
                     </section>
                     <button onClick={resetGame}>Try Again</button>
@@ -56,7 +51,6 @@ const Question = ({ getDiary, user_id, diary }) => {
         
         storeFirstAnswer(realAnswer);
        
-
         const randomAnswer1 = getRandomAnswer(diaryIndex);
         answerArray.push(randomAnswer1);
 
@@ -77,7 +71,6 @@ const Question = ({ getDiary, user_id, diary }) => {
         }
             
         const answers = mixedAnswers.map((option, i) => {
-                
                 if (option === answer) {
                     return <button key={i} disabled={disabled} className="correct" onClick={handleCorrectAnswer}>{option}</button>
                 } else {
@@ -112,9 +105,6 @@ const Question = ({ getDiary, user_id, diary }) => {
             toggleDisabled("");
             setAlreadyMixed(false);
         }, 2000);
-       
-        
-        
     }
 
     const handleIncorrectAnswer = (e) => {
@@ -131,7 +121,6 @@ const Question = ({ getDiary, user_id, diary }) => {
     }
 
     const mixAnswers = (answerArray, numAnswers = 3) => {
-        
         const mixedIndexArray = [];
         const randomIdx1 = Math.floor(Math.random() * numAnswers);
         mixedIndexArray.push(randomIdx1);
@@ -146,7 +135,6 @@ const Question = ({ getDiary, user_id, diary }) => {
         mixedIndexArray.push(randomIdx3);
 
         return mixedIndexArray.map(idx => answerArray[idx]);
-
     }
 
     const getRandomAnswer = (currentAnswerIdx) => {
@@ -154,11 +142,10 @@ const Question = ({ getDiary, user_id, diary }) => {
         while (random === currentAnswerIdx) {
             random = Math.floor(Math.random() * diary.length);
         }
-
         return diary[random].pinyin;
     }
    
-    if (diary.length > 0) {
+    if (diary.length > 2) {
         return (
             <div className="main-quiz-container">
                 <h1>Choose the correct pinyin!</h1>
@@ -171,7 +158,7 @@ const Question = ({ getDiary, user_id, diary }) => {
 
     return (
         <div className="no-entries-div">
-            <p>Add some characters to your diary to take a quiz!</p>
+            <p>Add at least 3 characters to your diary to take a quiz!</p>
         </div>
     )
 };
