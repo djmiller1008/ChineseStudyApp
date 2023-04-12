@@ -20,8 +20,6 @@ class LoginForm extends React.Component {
     if (nextProps.currentUser === true) {
       this.props.history.replace('/diary');
     }
-
-  
     this.setState({errors: nextProps.errors})
   }
 
@@ -33,7 +31,6 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     let user = {
       email: this.state.email,
       password: this.state.password
