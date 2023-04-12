@@ -8,15 +8,24 @@ class NavBar extends React.Component {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   logoutUser(e) {
       e.preventDefault();
-      this.props.logout();
-        
+      this.props.logout();        
   }
 
- 
+  handleDemo(e) {
+    e.preventDefault();
+    const user = {
+      email: 'demo@demo.com',
+      password: 'demopassword'
+    };
+
+    this.props.login(user);
+  }
+
   getLinks() {
       if (this.props.loggedIn) {
         return (
@@ -32,6 +41,7 @@ class NavBar extends React.Component {
       } else {
         return (
             <nav className='logged-out-sub-nav'>
+                <button onClick={this.handleDemo} className='demo-button'>Demo</button>
                 <Link to={'/signup'}>Signup</Link>
                 <Link to={'/login'}>Login</Link>
             </nav>
