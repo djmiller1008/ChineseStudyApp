@@ -12,7 +12,6 @@ const Question = ({ getDiary, user_id, diary }) => {
     const [disabled, toggleDisabled] = useState("");
     const [numCorrect, setNumCorrect] = useState(0);
     
-
     useEffect(() => {
         getDiary(user_id);
     }, []);
@@ -76,7 +75,6 @@ const Question = ({ getDiary, user_id, diary }) => {
                 } else {
                     return <button key={i} disabled={disabled} className="incorrect" onClick={handleIncorrectAnswer}>{option}</button>
                 }
-            
             })
 
         return (
