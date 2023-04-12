@@ -20,11 +20,9 @@ export const receiveErrors = errors => ({
     errors
 });
 
-// When our user is logged out, we will dispatch this action to set isAuthenticated to false
 export const logoutUser = () => ({
     type: RECEIVE_USER_LOGOUT
 });
-
 
 export const signup = user => dispatch => (
     APIUtil.signup(user).then(() => (
@@ -33,7 +31,6 @@ export const signup = user => dispatch => (
         dispatch(receiveErrors(err.response.data))
     ))
 );
-
 
 export const login = user => dispatch => (
     APIUtil.login(user).then(res => {
