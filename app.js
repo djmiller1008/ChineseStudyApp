@@ -21,7 +21,7 @@ app.use(function (req, res, next){
   } else {
     next();
   }
-});
+}); 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
